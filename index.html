@@ -69,9 +69,9 @@
         background-position: center;
         background-size: cover;
       }
-      .bgimg2 {
+      /*.bgimg2 {
         background-image: url(images/);
-      }
+      }*/
       .btn-custom2 {
         display: inline-flex;
         align-items: center;
@@ -156,10 +156,20 @@
 }
 
 /* NÚMEROS GRANDES */
-.countdown-time {
+/*.countdown-time {
     font-size: 58px;
     font-weight: 300;
     letter-spacing: 8px;
+    color: #000000;
+}*/
+.countdown-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    font-size: 58px;
+    font-weight: 300;
     color: #000000;
 }
 
@@ -186,14 +196,14 @@
         padding: 30px 25px;
     }
 
-    .countdown-time {
-        font-size: 36px;
-        letter-spacing: 4px;
+    .countdown-time{
+        font-size:28px;
+        gap:4px;
     }
 
-    .countdown-labels {
-        font-size: 11px;
-        letter-spacing: 3px;
+    .countdown-labels{
+        font-size:10px;
+        letter-spacing:1px;
     }
 
     .bottom-text {
@@ -629,7 +639,7 @@ background-color:#c6a2d6;
     list-style: none;
     padding: 0;
     margin-top: 20px;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
 }
 
@@ -668,6 +678,28 @@ html {
 .lista-alumnos{
     max-height:400px;
     overflow-y:auto;
+}
+.nombre-maestra{
+    font-size:22px;
+    font-weight:600;
+    color:#c29732;
+    margin-bottom:15px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding-bottom:10px;
+}
+.modal-dialog{
+    max-width:95%;
+}
+
+.lista-alumnos{
+    max-height:350px;
+    overflow-y:auto;
+}
+
+.custom-modal{
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
     </style>
 
@@ -846,15 +878,16 @@ html {
             </div>
 
             <div class="time">GENERACIÓN 2024-2026</div>
-            <div class="container text-center mt-2 bounce-top">
-                        <button
-                type="button"
-                class="btn btn-custom2"
-                data-bs-toggle="modal"
-                data-bs-target="#graduadosModal"
-                >
-                VER GRADUADOS
-            </button>
+            <!--<div class="container text-center mt-2 bounce-top">-->
+                <div class="d-flex justify-content-center mt-2">
+                    <button
+                            type="button"
+                            class="btn btn-custom2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#graduadosModal"
+                            >
+                            VER GRADUADOS
+                        </button>
             </div>
         </div>
     </div>
@@ -924,6 +957,9 @@ html {
             <div class="tab-content">
 
                 <div class="tab-pane fade show active" id="grupoA">
+                    <div class="nombre-maestra">
+                        Mtra. Claudia Pérez López
+                    </div>
                     <ul class="lista-alumnos">
                         <li>Aburto Sánchez Mateo Porfirio</li>
                         <li>Aguilar Duran Sofia Guadalupe</li>
@@ -958,6 +994,9 @@ html {
                 </div>
 
                 <div class="tab-pane fade" id="grupoB">
+                    <div class="nombre-maestra">
+                        Mtra. Diana Laura García García
+                    </div>
                     <ul class="lista-alumnos">
                         <li>Anaya Gutierrez Renata</li>
                         <li>Aparicio Jiménez Daylin Isabel</li>
@@ -994,6 +1033,9 @@ html {
                 </div>
 
                 <div class="tab-pane fade" id="grupoC">
+                    <div class="nombre-maestra">
+                        Mtra. Irma Fernández Díaz
+                    </div>
                     <ul class="lista-alumnos">
                         <li>Cámara Maciel Jesús Elías</li>
                         <li>Castillo Sánchez Noemi Valentina</li>
@@ -1028,6 +1070,9 @@ html {
                 </div>
 
                 <div class="tab-pane fade" id="grupoD">
+                    <div class="nombre-maestra">
+                        Mtra. Ana María Rodríguez de la Vega
+                    </div>
                     <ul class="lista-alumnos">
                         <li>Castillo López Erika Estefanía</li>
                         <li>Cervantes Fernández Neyvali</li>
